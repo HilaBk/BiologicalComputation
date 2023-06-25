@@ -33,14 +33,14 @@ def generate_subgraphs(size, graph):
 
 # ~ output text file function ~
 def write_results(size, different_motifs):
-    with open(f"res{size}.txt", 'w') as f:
+    with open(f"res_part_2.txt", 'w') as f:
         f.write(f"n={size}\n")
         count = 1
         for motif, occurrence_count in different_motifs:
             f.write(f"count={occurrence_count}\n")
             f.write(f"#{count}\n")
             for edge in motif.edges:
-                f.write(f"{edge[0]} {edge[1]}\n")
+                f.write(f"{edge[1]} {edge[0]}\n")
             count += 1
 
 # ~ main function ~
