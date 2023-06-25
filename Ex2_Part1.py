@@ -44,7 +44,7 @@ def generate_subgraphs(n):
 # ~ output text file function ~
 def save_subgraphs(motifs, filename):
     with open(filename, 'w') as file:
-        file.write(f"n={len(motifs[0])}\n")
+        file.write(f"n={(len(motifs[0])) + 1}\n")
         file.write(f"count={len(motifs)}\n")
 
         for i, subgraph in enumerate(motifs, start=1):
